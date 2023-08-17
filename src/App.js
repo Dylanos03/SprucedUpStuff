@@ -1,9 +1,11 @@
 import "./App.css";
+import { Navbar, Hero } from "./Components/index.js";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <Navbar />
+      <Hero />
     </div>
   );
 }
