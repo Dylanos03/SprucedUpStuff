@@ -5,21 +5,41 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
-  // const Dropdown = document.getElementById("Menu");
-  // console.log(Dropdown);
-  let dropdownOpen = false;
-
   let Icon = faX;
   const [open, setOpen] = useState(false);
   const [icon, setIcon] = useState(faBars);
+  const [scrolled, setScrolled] = useState(false);
 
   function handleClick() {
     const Dropdown = DropdownRef.current;
     const Navbar = NavbarRef.current;
     Dropdown.classList.toggle("hidden");
-    dropdownOpen = !dropdownOpen;
     setOpen(!open);
+    if (!open) {
+      Navbar.classList.add("bg-ForestGreen-500");
+    } else {
+      if (window.scrollY < 90) {
+        Navbar.classList.remove("bg-ForestGreen-500");
+      }
+    }
   }
+
+  // function navChange() {
+  //   const Dropdown = DropdownRef.current;
+  //   const Navbar = NavbarRef.current;
+  //   if (window.scrollY >= 90) {
+  //     setScrolled(true);
+  //   } else {
+  //     setScrolled(false);
+  //   }
+  //   if (scrolled) {
+  //     Navbar.classList.add("bg-ForestGreen-500");
+  //   } else {
+  //     Navbar.classList.remove("bg-ForestGreen-500");
+  //   }
+  // }
+
+  // window.addEventListener("scroll", navChange);
 
   const DropdownRef = useRef(null);
   const NavbarRef = useRef(null);
@@ -28,7 +48,7 @@ function Navbar() {
     <nav id="Navbar" className=" fixed top-0 z-50  w-full duration-100 ">
       <div
         ref={NavbarRef}
-        className="min-w-screen-xl lg:flex flex-wrap items-center justify-evenly mx-auto p-4 gap-24 align-middle absolute w-full "
+        className="min-w-screen-xl lg:flex flex-wrap items-center justify-evenly mx-auto p-4 gap-24 align-middle absolute w-full duration-100"
       >
         <div className="flex justify justify-between">
           <img src={Logo} alt="" className="h-8" />
@@ -42,7 +62,7 @@ function Navbar() {
         <ul
           id="Menu"
           ref={DropdownRef}
-          className="lg:flex lg:flex-row flex-col flex-wrap justify-between gap-16 items-center text-white text-left duration-100 lg:background-none bg-ForestGreen-500 hidden "
+          className="lg:flex lg:flex-row flex-col flex-wrap justify-between gap-16 items-center text-white text-left duration-500 lg:bg-transparent bg-ForestGreen-500 hidden "
         >
           <li className="lg:my-0 my-4 ">
             <a href="#">Home</a>
