@@ -5,6 +5,7 @@ import {
   faSterlingSign,
   faPaintBrush,
 } from "@fortawesome/free-solid-svg-icons";
+import { faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 function About() {
   return (
@@ -51,7 +52,27 @@ function About() {
             <p>Got some furniture that needs a bit of TLC?</p>
           </div>
           <div className="py-4">
-            <h3 className="text-xl font-semibold">Follow me on socials!</h3>
+            <div className="pb-2">
+              <h3 className="text-xl font-semibold">Follow me on socials!</h3>
+            </div>
+            <div className="flex justify-center gap-2 items-center py-2">
+              <FontAwesomeIcon
+                icon={faInstagram}
+                color="Black"
+                className="h-8 w-8 cursor-pointer"
+                href="https://www.instagram.com/spruced_up_stuff/?hl=en"
+              />
+              <p>@spruced_up_stuff</p>
+            </div>
+            <div className="flex justify-center gap-2 items-center py-2">
+              <FontAwesomeIcon
+                icon={faFacebook}
+                color="Black"
+                className="h-8 w-8 cursor-pointer"
+                href="https://www.facebook.com/SprucedUpStuff"
+              />
+              <p>sprucedupstuff</p>
+            </div>
           </div>
         </div>
       </div>

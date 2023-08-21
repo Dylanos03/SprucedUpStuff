@@ -10,7 +10,7 @@ function Navbar() {
   const [icon, setIcon] = useState(faBars);
   const [scrolled, setScrolled] = useState(false);
 
-  function handleClick() {
+  const handleClick = () => {
     const Dropdown = DropdownRef.current;
     const Navbar = NavbarRef.current;
     Dropdown.classList.toggle("hidden");
@@ -22,33 +22,32 @@ function Navbar() {
         Navbar.classList.remove("bg-ForestGreen-500");
       }
     }
+  };
+
+  function navChange() {
+    const Dropdown = DropdownRef.current;
+    const Navbar = NavbarRef.current;
+    if (window.scrollY >= 90) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
   }
 
-  // function navChange() {
-  //   const Dropdown = DropdownRef.current;
-  //   const Navbar = NavbarRef.current;
-  //   if (window.scrollY >= 90) {
-  //     setScrolled(true);
-  //   } else {
-  //     setScrolled(false);
-  //   }
-  //   if (scrolled) {
-  //     Navbar.classList.add("bg-ForestGreen-500");
-  //   } else {
-  //     Navbar.classList.remove("bg-ForestGreen-500");
-  //   }
-  // }
-
-  // window.addEventListener("scroll", navChange);
+  window.addEventListener("scroll", navChange);
 
   const DropdownRef = useRef(null);
   const NavbarRef = useRef(null);
 
   return (
-    <nav id="Navbar" className=" fixed top-0 z-50  w-full duration-100 ">
+    <nav id="Navbar" className={" fixed top-0 z-50  w-full duration-100 "}>
       <div
         ref={NavbarRef}
-        className="min-w-screen-xl lg:flex flex-wrap items-center justify-evenly mx-auto p-4 gap-24 align-middle absolute w-full duration-100"
+        className={
+          scrolled
+            ? "min-w-screen-xl lg:flex flex-wrap items-center justify-evenly mx-auto p-4 gap-24 align-middle absolute w-full duration-100 bg-ForestGreen-500"
+            : "min-w-screen-xl lg:flex flex-wrap items-center justify-evenly mx-auto p-4 gap-24 align-middle absolute w-full duration-100"
+        }
       >
         <div className="flex justify justify-between">
           <img src={Logo} alt="" className="h-8" />
