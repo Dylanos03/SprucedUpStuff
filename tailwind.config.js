@@ -12,6 +12,15 @@ module.exports = {
           900: "#0C2B0A",
         },
       },
+      keyframes: {
+        slideLeft: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+      },
+      animation: {
+        "sliding-left": "slideLeft 8s linear infinite",
+      },
     },
   },
   plugins: [],

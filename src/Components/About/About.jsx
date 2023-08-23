@@ -28,7 +28,7 @@ function About() {
             <FontAwesomeIcon
               icon={faSterlingSign}
               color="Black"
-              className="lg:hidden h-16 w-16 pb-4"
+              className=" h-16 w-16 pb-4"
             />
             <h3 className="text-xl font-semibold">Sell</h3>
             <p>Check out my facebook to see what I am selling!</p>
@@ -37,7 +37,7 @@ function About() {
             <FontAwesomeIcon
               icon={faHandHoldingDollar}
               color="Black"
-              className="lg:hidden h-16 w-16 pb-4"
+              className=" h-16 w-16 pb-4"
             />
             <h3 className="text-xl font-semibold">Buy</h3>
             <p>Got some old furniture you don’t need?</p>
@@ -46,7 +46,7 @@ function About() {
             <FontAwesomeIcon
               icon={faPaintBrush}
               color="Black"
-              className="lg:hidden h-16 w-16 pb-4"
+              className=" h-16 w-16 pb-4"
             />
             <h3 className="text-xl font-semibold">Refurb</h3>
             <p>Got some furniture that needs a bit of TLC?</p>
