@@ -23,8 +23,8 @@ module.exports = {
         },
       },
       animation: {
-        "sliding-left": "slideLeft 30s linear infinite",
-        "sliding-right": "slideRight 30s linear infinite",
+        "sliding-left": "slideLeft 40s linear infinite",
+        "sliding-right": "slideRight 40s linear infinite",
       },
     },
   },
