@@ -17,9 +17,14 @@ module.exports = {
           "0%": { transform: "translateX(0%)" },
           "100%": { transform: "translateX(-100%)" },
         },
+        slideRight: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
       },
       animation: {
-        "sliding-left": "slideLeft 8s linear infinite",
+        "sliding-left": "slideLeft 30s linear infinite",
+        "sliding-right": "slideRight 30s linear infinite",
       },
     },
   },
