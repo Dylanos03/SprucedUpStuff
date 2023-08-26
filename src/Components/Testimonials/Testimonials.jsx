@@ -31,25 +31,27 @@ function Testimonials() {
   ];
 
   return (
-    <div>
-      <div>
-        <h3 className="text-2xl font-semibold text-ForestGreen-700">
-          Testimonials
-        </h3>
+    <div className="flex justify-center">
+      <div className="max-w-6xl">
+        <div>
+          <h3 className="text-2xl lg:text-4xl font-semibold text-ForestGreen-700">
+            Testimonials
+          </h3>
+        </div>
+        <div className="flex flex-col lg:flex-row flex-wrap items-center justify-center my-8 gap-4">
+          {TestimonialsDetails.map((value, index) => (
+            <TestimonialBox
+              Key={index}
+              name={value.name}
+              reviewText={value.text}
+              rating={value.rating}
+            />
+          ))}
+        </div>
+        <a href="#" className="underline">
+          Leave a review
+        </a>
       </div>
-      <div className="flex flex-col items-center my-8 gap-4">
-        {TestimonialsDetails.map((value, index) => (
-          <TestimonialBox
-            Key={index}
-            name={value.name}
-            reviewText={value.text}
-            rating={value.rating}
-          />
-        ))}
-      </div>
-      <a href="#" className="underline">
-        Leave a review
-      </a>
     </div>
   );
 }

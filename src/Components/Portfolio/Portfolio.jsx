@@ -5,8 +5,8 @@ import ImgRow3 from "../../Content/ImageRow3";
 
 function Portfolio() {
   return (
-    <div className="my-12 py-4 flex flex-col gap-4">
-      <h2 className="text-2xl font-bold my-8">My Previous Work</h2>
+    <div className=" py-4 flex flex-col gap-4 my-24">
+      <h2 className="text-2xl font-bold my-8 lg:text-4xl">My Previous Work</h2>
       <div
         className=" relative
         overflow-hidden w-max flex"

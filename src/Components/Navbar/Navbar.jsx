@@ -40,13 +40,13 @@ function Navbar() {
   const NavbarRef = useRef(null);
 
   return (
-    <nav id="Navbar" className={" fixed top-0 z-50  w-full duration-100 "}>
+    <nav id="Navbar" className={" fixed top-0 z-50  w-full  "}>
       <div
         ref={NavbarRef}
         className={
           scrolled
-            ? "min-w-screen-xl lg:flex flex-wrap items-center justify-evenly mx-auto p-4 gap-24 align-middle absolute w-full duration-100 bg-ForestGreen-500"
-            : "min-w-screen-xl lg:flex flex-wrap items-center justify-evenly mx-auto p-4 gap-24 align-middle absolute w-full duration-100"
+            ? "min-w-screen-xl lg:flex flex-wrap items-center justify-evenly mx-auto p-4 gap-24 align-middle absolute w-full pt-8 lg:pt-4 bg-ForestGreen-500"
+            : "min-w-screen-xl lg:flex flex-wrap items-center justify-evenly mx-auto p-4 gap-24 align-middle absolute w-full pt-8 lg:pt-4"
         }
       >
         <div className="flex justify justify-between">
@@ -54,14 +54,14 @@ function Navbar() {
           <FontAwesomeIcon
             icon={open ? faX : faBars}
             color="white"
-            className="lg:hidden h-8 cursor-pointer w-8"
+            className="lg:hidden h-8 cursor-pointer w-12"
             onClick={handleClick}
           />
         </div>
         <ul
           id="Menu"
           ref={DropdownRef}
-          className="lg:flex lg:flex-row flex-col flex-wrap justify-between gap-16 items-center text-white text-left duration-500 lg:bg-transparent bg-ForestGreen-500 hidden "
+          className="lg:flex lg:flex-row flex-col flex-wrap justify-between gap-16 items-center text-white text-left  lg:bg-transparent bg-ForestGreen-500 hidden my-8 lg:my-4"
         >
           <li className="lg:my-0 my-4 ">
             <a href="#">Home</a>
